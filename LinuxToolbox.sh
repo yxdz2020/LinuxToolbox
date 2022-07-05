@@ -157,7 +157,7 @@ open_ports(){
 bbr_script(){
     virt=$(systemd-detect-virt)
     TUN=$(cat /dev/net/tun 2>&1 | tr '[:upper:]' '[:lower:]')
-       if [[ ${virt} =~ "kvm"|"zvm"|"microsoft"|"xen"|"vmware" ]]; then
+        if [[ ${virt} =~ "kvm"|"zvm"|"microsoft"|"xen"|"vmware" ]]; then
             wget -O tcpx.sh "https://github.com/ylx2016/Linux-NetSpeed/raw/master/tcpx.sh" && chmod +x tcpx.sh && ./tcpx.sh
     elif [[ ${virt} == "openvz" ]]; then
         if [[ ! $TUN =~ 'in bad state' ]] && [[ ! $TUN =~ '处于错误状态' ]] && [[ ! $TUN =~ 'Die Dateizugriffsnummer ist in schlechter Verfassung' ]]; then

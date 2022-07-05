@@ -186,7 +186,7 @@ v6_dns64(){
 warp_script(){
     green "请选择你接下来使用的脚本"
     echo "1. Misaka-WARP"
-    echo "2. fscarmen(推荐)"
+    echo "2. fscarmen"
     echo "3. fscarmen-docker"
     echo "4. fscarmen warp解锁奈飞流媒体脚本"
     echo "5. P3TERX"
@@ -240,14 +240,12 @@ xui() {
     echo "1. 使用X-ui官方原版"
     echo "2. 使用Misaka魔改版"
     echo "3. 使用FranzKafkaYu魔改版"
-    echo "4. 使用yxdz2020魔改版"
     echo "0. 返回主菜单"
     read -rp "请输入选项:" xuiNumberInput
     case "$xuiNumberInput" in
         1) bash <(curl -Ls https://raw.githubusercontents.com/vaxilu/x-ui/master/install.sh) ;;
         2) wget -N --no-check-certificate https://raw.githubusercontents.com/Misaka-blog/x-ui/master/install.sh && bash install.sh ;;
         3) bash <(curl -Ls https://raw.githubusercontents.com/FranzKafkaYu/x-ui/master/install.sh) ;;
-	4) bash <(curl -Ls https://raw.githubusercontents.com/yxdz2020/x-ui/main/install.sh) ;;
         0) menu ;;
     esac
 }

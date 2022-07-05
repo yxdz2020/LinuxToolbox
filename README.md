@@ -12,12 +12,12 @@
 2. 用SSH客户端连接上VPS，输入以下命令（若不是root用户请先`sudo -i`提权）
 
 ```shell
-wget -N --no-check-certificate https://raw.githubusercontents.com/Misaka-blog/MisakaLinuxToolbox/master/MisakaToolbox.sh && bash MisakaToolbox.sh
+wget -N --no-check-certificate https://raw.githubusercontents.com/yxdz2020/LinuxToolbox/master/yxdzToolbox.sh && bash yxdzToolbox.sh
 ```
 
 第一次运行以后，可用快捷方式启动
 ```bash
-bash MisakaToolbox.sh
+bash yxdzToolbox.sh
 ```
 
 ## 工具箱功能提议

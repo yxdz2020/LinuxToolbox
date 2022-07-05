@@ -157,8 +157,8 @@ open_ports(){
 bbr_script(){
     virt=$(systemd-detect-virt)
     TUN=$(cat /dev/net/tun 2>&1 | tr '[:upper:]' '[:lower:]')
-    if [ ${virt} =~ "kvm"|"zvm"|"microsoft"|"xen"|"vmware" ]; then
-        wget -O tcpx.sh "https://github.com/ylx2016/Linux-NetSpeed/raw/master/tcpx.sh" && chmod +x tcpx.sh && ./tcpx.sh
+        if [ ${virt} =~ "kvm"|"zvm"|"microsoft"|"xen"|"vmware" ]; then
+            wget -O tcpx.sh "https://github.com/ylx2016/Linux-NetSpeed/raw/master/tcpx.sh" && chmod +x tcpx.sh && ./tcpx.sh
     elif [ ${virt} == "openvz" ]; then
         if [[ ! $TUN =~ 'in bad state' ]] && [[ ! $TUN =~ '处于错误状态' ]] && [[ ! $TUN =~ 'Die Dateizugriffsnummer ist in schlechter Verfassung' ]]; then
             wget -N --no-check-certificate https://raw.githubusercontents.com/Misaka-blog/tun-script/master/tun.sh && bash tun.sh
@@ -240,14 +240,14 @@ xui() {
     echo "1. 使用X-ui官方原版"
     echo "2. 使用Misaka魔改版"
     echo "3. 使用FranzKafkaYu魔改版"
-	echo "4. 使用yxdz2020魔改版"
+    echo "4. 使用yxdz2020魔改版"
     echo "0. 返回主菜单"
     read -rp "请输入选项:" xuiNumberInput
     case "$xuiNumberInput" in
         1) bash <(curl -Ls https://raw.githubusercontents.com/vaxilu/x-ui/master/install.sh) ;;
         2) wget -N --no-check-certificate https://raw.githubusercontents.com/Misaka-blog/x-ui/master/install.sh && bash install.sh ;;
         3) bash <(curl -Ls https://raw.githubusercontents.com/FranzKafkaYu/x-ui/master/install.sh) ;;
-		4) bash <(curl -Ls https://raw.githubusercontents.com/yxdz2020/x-ui/main/install.sh) ;;
+	4) bash <(curl -Ls https://raw.githubusercontents.com/yxdz2020/x-ui/main/install.sh) ;;
         0) menu ;;
     esac
 }

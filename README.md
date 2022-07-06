@@ -13,19 +13,16 @@
 2. 用SSH客户端连接上VPS，输入以下命令
 
 ## 注意,若不是root用户,请先输入以下命令
-
 ```
 sudo -i
 ```
 
 工具箱一键脚本安装命令
-
 ```shell
 wget -N --no-check-certificate https://raw.githubusercontents.com/yxdz2020/LinuxToolbox/master/LinuxToolbox.sh && bash LinuxToolbox.sh
 ```
 
 第一次运行以后，可用快捷方式启动
-
 ```bash
 bash LinuxToolbox.sh
 ```
@@ -162,13 +159,8 @@ GitLab：https://gitlab.com/misakano7545/MisakaLinuxToolbox
 
 BitBucket：https://bitbucket.org/misakano7545/misakalinuxtoolbox/
 
-## Stars 增长记录
-
-[![Stargazers over time](https://starchart.cc/Misaka-blog/MisakaLinuxToolbox.svg)](https://starchart.cc/Misaka-blog/MisakaLinuxToolbox)
-
 ## Repo 统计
 ![Alt](https://repobeats.axiom.co/api/embed/2512c745cf3ee94ad15c8e8ada474469e081f1c4.svg "Repobeats analytics image")
 
 ## License
-
 GNU General Public License v3.0  

@@ -9,7 +9,9 @@
 ## 使用方法
 
 1. 给这个项目一个Star 
-2. 用SSH客户端连接上VPS，输入以下命令（若不是root用户请先```shell sudo -i```提权）
+2. 用SSH客户端连接上VPS，输入以下命令（若不是root用户请先```sudo -i```提权）
+
+```sudo -i```
 
 ```shell
 wget -N --no-check-certificate https://raw.githubusercontents.com/yxdz2020/LinuxToolbox/master/LinuxToolbox.sh && bash LinuxToolbox.sh
@@ -151,6 +153,7 @@ GitHub：https://github.com/Misaka-blog/MisakaLinuxToolbox/
 GitLab：https://gitlab.com/misakano7545/MisakaLinuxToolbox
 
 BitBucket：https://bitbucket.org/misakano7545/misakalinuxtoolbox/
+
 ## Stars 增长记录
 
 [![Stargazers over time](https://starchart.cc/Misaka-blog/MisakaLinuxToolbox.svg)](https://starchart.cc/Misaka-blog/MisakaLinuxToolbox)

@@ -9,7 +9,7 @@
 ## 使用方法
 
 1. 给这个项目一个Star 
-2. 用SSH客户端连接上VPS，输入以下命令（若不是root用户请先```sudo -i```提权）
+2. 用SSH客户端连接上VPS，输入以下命令（若不是root用户请先```shell sudo -i```提权）
 
 ```shell
 wget -N --no-check-certificate https://raw.githubusercontents.com/yxdz2020/LinuxToolbox/master/LinuxToolbox.sh && bash LinuxToolbox.sh

@@ -144,14 +144,6 @@ DD系统：https://www.cxthhhhh.com/network-reinstall-system-modify
 更换系统语言：https://github.com/johnrosen1/vpstoolbox
 </details>  
 
-## 赞助我们
-
-点击页面上方的Sponsor按钮，赞助我们！  
-你的赞助会帮助工具箱变得更完善！
-
-## 交流群
-[Telegram](https://t.me/misakanetcn)
-
 ## 防和谐备份仓库
 
 GitHub：https://github.com/Misaka-blog/MisakaLinuxToolbox/

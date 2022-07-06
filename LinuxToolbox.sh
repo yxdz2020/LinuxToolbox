@@ -161,7 +161,7 @@ bbr_script(){
             wget -O tcpx.sh "https://github.com/ylx2016/Linux-NetSpeed/raw/master/tcpx.sh" && chmod +x tcpx.sh && ./tcpx.sh
     elif [[ ${virt} == "openvz" ]]; then
         if [[ ! $TUN =~ 'in bad state' ]] && [[ ! $TUN =~ '处于错误状态' ]] && [[ ! $TUN =~ 'Die Dateizugriffsnummer ist in schlechter Verfassung' ]]; then
-            wget -N --no-check-certificate https://raw.githubusercontents.com/Misaka-blog/tun-script/master/tun.sh && bash tun.sh
+            wget -N --no-check-certificate https://raw.githubusercontents.com/yxdz2020/tun-script/master/tun.sh && bash tun.sh
         else
             wget -N --no-check-certificate https://raw.githubusercontents.com/mzz2017/lkl-haproxy/master/lkl-haproxy.sh && bash lkl-haproxy.sh
         fi
@@ -184,17 +184,19 @@ v6_dns64(){
 }
 
 warp_script(){
+    echo "                       "
     green "请选择你接下来使用的脚本"
     echo "1. Misaka-WARP"
     echo "2. fscarmen(推荐)"
     echo "3. fscarmen-docker"
     echo "4. fscarmen warp解锁奈飞流媒体脚本"
     echo "5. P3TERX"
+    echo " --------------"
     echo "0. 返回主菜单"
-    echo ""
+    echo "                    "
     read -rp "请输入选项:" warpNumberInput
 	case $warpNumberInput in
-        1) wget -N https://raw.githubusercontents.com/Misaka-blog/Misaka-WARP-Script/master/misakawarp.sh && bash misakawarp.sh ;;
+        1) wget -N https://raw.githubusercontents.com/yxdz2020/Misaka-WARP-Script/master/misakawarp.sh && bash misakawarp.sh ;;
         2) wget -N https://raw.githubusercontents.com/fscarmen/warp/main/menu.sh && bash menu.sh ;;
         3) wget -N https://raw.githubusercontents.com/fscarmen/warp/main/docker.sh && bash docker.sh ;;
         4) bash <(curl -sSL https://raw.githubusercontents.com/fscarmen/warp_unlock/main/unlock.sh) ;;
@@ -241,7 +243,9 @@ xui() {
     echo "2. 使用Misaka魔改版"
     echo "3. 使用FranzKafkaYu魔改版"
     echo "4. 使用yxdz2020魔改版"
+    echo " --------------"
     echo "0. 返回主菜单"
+    echo "                    "
     read -rp "请输入选项:" xuiNumberInput
     case "$xuiNumberInput" in
         1) bash <(curl -Ls https://raw.githubusercontents.com/vaxilu/x-ui/master/install.sh) ;;
@@ -279,6 +283,7 @@ serverstatus() {
     green "请选择你需要安装探针的客户端类型"
     echo "1. 服务端"
     echo "2. 监控端"
+    echo " --------------"
     echo "0. 返回主页"
     echo "                            "
 	read -rp "请输入选项:" menuNumberInput1
@@ -294,13 +299,8 @@ menu(){
     clear
     echo "#############################################################"
     echo -e "#                   ${RED}Misaka Linux Toolbox${PLAIN}                    #"
-    echo -e "# ${GREEN}作者${PLAIN}: Misaka No                                           #"
-    echo -e "# ${GREEN}网址${PLAIN}: https://owo.misaka.rest                             #"
-    echo -e "# ${GREEN}论坛${PLAIN}: https://vpsgo.co                                    #"
-    echo -e "# ${GREEN}TG群${PLAIN}: https://t.me/misakanetcn                            #"
-    echo -e "# ${GREEN}GitHub${PLAIN}: https://github.com/Misaka-blog                    #"
-    echo -e "# ${GREEN}Bitbucket${PLAIN}: https://bitbucket.org/misakano7545             #"
-    echo -e "# ${GREEN}GitLab${PLAIN}: https://gitlab.com/misaka-blog                    #"
+    echo -e "# ${GREEN}原作者${PLAIN}: Misaka No                                           #"
+    echo -e "# ${GREEN}现作者${PLAIN}: yxdz2020                                            #"
     echo "#############################################################"
     echo ""
     echo -e " ${GREEN}1.${PLAIN} 系统相关"
@@ -308,7 +308,7 @@ menu(){
     echo -e " ${GREEN}3.${PLAIN} 节点相关"
     echo -e " ${GREEN}4.${PLAIN} 性能测试"
     echo -e " ${GREEN}5.${PLAIN} VPS探针"
-    echo " -------------"
+    echo " --------------"
     echo -e " ${GREEN}9.${PLAIN} 更新脚本"
     echo -e " ${GREEN}0.${PLAIN} 退出脚本"
     echo ""
@@ -343,13 +343,8 @@ menu1(){
     clear
     echo "#############################################################"
     echo -e "#                   ${RED}Misaka Linux Toolbox${PLAIN}                    #"
-    echo -e "# ${GREEN}作者${PLAIN}: Misaka No                                           #"
-    echo -e "# ${GREEN}网址${PLAIN}: https://owo.misaka.rest                             #"
-    echo -e "# ${GREEN}论坛${PLAIN}: https://vpsgo.co                                    #"
-    echo -e "# ${GREEN}TG群${PLAIN}: https://t.me/misakanetcn                            #"
-    echo -e "# ${GREEN}GitHub${PLAIN}: https://github.com/Misaka-blog                    #"
-    echo -e "# ${GREEN}Bitbucket${PLAIN}: https://bitbucket.org/misakano7545             #"
-    echo -e "# ${GREEN}GitLab${PLAIN}: https://gitlab.com/misaka-blog                    #"
+    echo -e "# ${GREEN}原作者${PLAIN}: Misaka No                                           #"
+    echo -e "# ${GREEN}现作者${PLAIN}: yxdz2020                                            #"
     echo "#############################################################"
     echo ""
     echo -e " ${GREEN}1.${PLAIN} 开放系统防火墙端口"
@@ -365,24 +360,24 @@ menu1(){
     echo -e " ${GREEN}11.${PLAIN} 修改Linux系统软件源"
     echo -e " ${GREEN}12.${PLAIN} 切换系统语言为中文"
     echo -e " ${GREEN}13.${PLAIN} OpenVZ VPS启用TUN模块"
-    echo " -------------"
+    echo " --------------"
     echo -e " ${GREEN}0.${PLAIN} 返回主菜单"
     echo ""
     read -rp " 请输入选项 [0-13]:" menuInput
     case $menuInput in
         1) open_ports ;;
-        2) wget -N --no-check-certificate https://raw.githubusercontents.com/Misaka-blog/rootLogin/master/root.sh && bash root.sh ;;
+        2) wget -N --no-check-certificate https://raw.githubusercontents.com/yxdz2020/rootLogin/master/root.sh && bash root.sh ;;
         3) wget -N --no-check-certificate https://raw.githubusercontents.com/Misaka-blog/screenManager/master/screen.sh && bash screen.sh ;;
         4) bbr_script ;;
         5) v6_dns64 ;;
         6) warp_script ;;
         7) curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun ;;
-        8) wget -N --no-check-certificate https://raw.githubusercontents.com/Misaka-blog/acme-1key/master/acme1key.sh && bash acme1key.sh ;;
-        9) wget -N --no-check-certificate https://raw.githubusercontents.com/Misaka-blog/argo-tunnel-script/master/argo.sh && bash argo.sh ;;
-        10) wget -N --no-check-certificate https://raw.githubusercontents.com/Misaka-blog/Ngrok-1key/master/ngrok.sh && bash ngrok.sh ;;
+        8) wget -N --no-check-certificate https://raw.githubusercontents.com/yxdz2020/acme-1key/master/acme1key.sh && bash acme1key.sh ;;
+        9) wget -N --no-check-certificate https://raw.githubusercontents.com/yxdz2020/argo-tunnel-script/master/argo.sh && bash argo.sh ;;
+        10) wget -N --no-check-certificate https://raw.githubusercontents.com/yxdz2020/Ngrok-1key/master/ngrok.sh && bash ngrok.sh ;;
         11) bash <(curl -sSL https://cdn.jsdelivr.net/gh/SuperManito/LinuxMirrors@main/ChangeMirrors.sh) ;;
         12) setChinese ;;
-        13) wget -N --no-check-certificate https://raw.githubusercontents.com/Misaka-blog/tun-script/master/tun.sh && bash tun.sh ;;
+        13) wget -N --no-check-certificate https://raw.githubusercontents.com/yxdz2020/tun-script/master/tun.sh && bash tun.sh ;;
 	0) menu ;;
         *) exit 1 ;;
     esac
@@ -392,13 +387,8 @@ menu2(){
     clear
     echo "#############################################################"
     echo -e "#                   ${RED}Misaka Linux Toolbox${PLAIN}                    #"
-    echo -e "# ${GREEN}作者${PLAIN}: Misaka No                                           #"
-    echo -e "# ${GREEN}网址${PLAIN}: https://owo.misaka.rest                             #"
-    echo -e "# ${GREEN}论坛${PLAIN}: https://vpsgo.co                                    #"
-    echo -e "# ${GREEN}TG群${PLAIN}: https://t.me/misakanetcn                            #"
-    echo -e "# ${GREEN}GitHub${PLAIN}: https://github.com/Misaka-blog                    #"
-    echo -e "# ${GREEN}Bitbucket${PLAIN}: https://bitbucket.org/misakano7545             #"
-    echo -e "# ${GREEN}GitLab${PLAIN}: https://gitlab.com/misaka-blog                    #"
+    echo -e "# ${GREEN}原作者${PLAIN}: Misaka No                                           #"
+    echo -e "# ${GREEN}现作者${PLAIN}: yxdz2020                                            #"
     echo "#############################################################"
     echo ""
     echo -e " ${GREEN}1.${PLAIN} aapanel面板"
@@ -407,7 +397,7 @@ menu2(){
     echo -e " ${GREEN}4.${PLAIN} CyberPanel面板"
     echo -e " ${GREEN}5.${PLAIN} 青龙面板"
     echo -e " ${GREEN}6.${PLAIN} Trojan面板"
-    echo " -------------"
+    echo " --------------"
     echo -e " ${GREEN}0.${PLAIN} 返回主菜单"
     echo ""
     read -rp " 请输入选项 [0-6]:" menuInput
@@ -427,13 +417,8 @@ menu3(){
     clear
     echo "#############################################################"
     echo -e "#                   ${RED}Misaka Linux Toolbox${PLAIN}                    #"
-    echo -e "# ${GREEN}作者${PLAIN}: Misaka No                                           #"
-    echo -e "# ${GREEN}网址${PLAIN}: https://owo.misaka.rest                             #"
-    echo -e "# ${GREEN}论坛${PLAIN}: https://vpsgo.co                                    #"
-    echo -e "# ${GREEN}TG群${PLAIN}: https://t.me/misakanetcn                            #"
-    echo -e "# ${GREEN}GitHub${PLAIN}: https://github.com/Misaka-blog                    #"
-    echo -e "# ${GREEN}Bitbucket${PLAIN}: https://bitbucket.org/misakano7545             #"
-    echo -e "# ${GREEN}GitLab${PLAIN}: https://gitlab.com/misaka-blog                    #"
+    echo -e "# ${GREEN}原作者${PLAIN}: Misaka No                                           #"
+    echo -e "# ${GREEN}现作者${PLAIN}: yxdz2020                                            #"
     echo "#############################################################"
     echo ""
     echo -e " ${GREEN}1.${PLAIN} mack-a"
@@ -443,7 +428,7 @@ menu3(){
     echo -e " ${GREEN}5.${PLAIN} misaka xray"
     echo -e " ${GREEN}6.${PLAIN} teddysun shadowsocks"
     echo -e " ${GREEN}7.${PLAIN} telegram mtproxy"
-    echo " -------------"
+    echo " --------------"
     echo -e " ${GREEN}0.${PLAIN} 返回主菜单"
     echo ""
     read -rp " 请输入选项 [0-6]:" menuInput
@@ -464,13 +449,8 @@ menu4(){
     clear
     echo "#############################################################"
     echo -e "#                   ${RED}Misaka Linux Toolbox${PLAIN}                    #"
-    echo -e "# ${GREEN}作者${PLAIN}: Misaka No                                           #"
-    echo -e "# ${GREEN}网址${PLAIN}: https://owo.misaka.rest                             #"
-    echo -e "# ${GREEN}论坛${PLAIN}: https://vpsgo.co                                    #"
-    echo -e "# ${GREEN}TG群${PLAIN}: https://t.me/misakanetcn                            #"
-    echo -e "# ${GREEN}GitHub${PLAIN}: https://github.com/Misaka-blog                    #"
-    echo -e "# ${GREEN}Bitbucket${PLAIN}: https://bitbucket.org/misakano7545             #"
-    echo -e "# ${GREEN}GitLab${PLAIN}: https://gitlab.com/misaka-blog                    #"
+    echo -e "# ${GREEN}原作者${PLAIN}: Misaka No                                           #"
+    echo -e "# ${GREEN}现作者${PLAIN}: yxdz2020                                            #"
     echo "#############################################################"
     echo ""
     echo -e " ${GREEN}1.${PLAIN} VPS测试 (misakabench)"
@@ -480,12 +460,12 @@ menu4(){
     echo -e " ${GREEN}5.${PLAIN} VPS测试 (融合怪全测)"
     echo -e " ${GREEN}6.${PLAIN} 流媒体检测"
     echo -e " ${GREEN}7.${PLAIN} 三网测速"
-    echo " -------------"
+    echo " --------------"
     echo -e " ${GREEN}0.${PLAIN} 返回主菜单"
     echo ""
     read -rp " 请输入选项 [0-7]:" menuInput
     case $menuInput in
-        1) bash <(curl -Lso- https://cdn.jsdelivr.net/gh/Misaka-blog/misakabench@master/misakabench.sh) ;;
+        1) bash <(curl -Lso- https://cdn.jsdelivr.net/gh/yxdz2020/misakabench@master/misakabench.sh) ;;
         2) wget -qO- bench.sh | bash ;;
         3) wget -qO- --no-check-certificate https://raw.githubusercontents.com/oooldking/script/master/superbench.sh | bash ;;
         4) curl -fsL https://ilemonra.in/LemonBenchIntl | bash -s fast ;;
@@ -501,18 +481,13 @@ menu5(){
     clear
     echo "#############################################################"
     echo -e "#                   ${RED}Misaka Linux Toolbox${PLAIN}                    #"
-    echo -e "# ${GREEN}作者${PLAIN}: Misaka No                                           #"
-    echo -e "# ${GREEN}网址${PLAIN}: https://owo.misaka.rest                             #"
-    echo -e "# ${GREEN}论坛${PLAIN}: https://vpsgo.co                                    #"
-    echo -e "# ${GREEN}TG群${PLAIN}: https://t.me/misakanetcn                            #"
-    echo -e "# ${GREEN}GitHub${PLAIN}: https://github.com/Misaka-blog                    #"
-    echo -e "# ${GREEN}Bitbucket${PLAIN}: https://bitbucket.org/misakano7545             #"
-    echo -e "# ${GREEN}GitLab${PLAIN}: https://gitlab.com/misaka-blog                    #"
+    echo -e "# ${GREEN}原作者${PLAIN}: Misaka No                                           #"
+    echo -e "# ${GREEN}现作者${PLAIN}: yxdz2020                                            #"
     echo "#############################################################"
     echo ""
     echo -e " ${GREEN}1.${PLAIN} 哪吒面板"
     echo -e " ${GREEN}2.${PLAIN} 可乐ServerStatus-Horatu"
-    echo " -------------"
+    echo " --------------"
     echo -e " ${GREEN}0.${PLAIN} 返回主菜单"
     echo ""
     read -rp " 请输入选项 [0-2]:" menuInput

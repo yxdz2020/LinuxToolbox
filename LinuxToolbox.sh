@@ -184,7 +184,7 @@ v6_dns64(){
 }
 
 warp_script(){
-    echo "                       "
+    echo "                    "
     green "请选择你接下来使用的脚本"
     echo "1. Misaka-WARP"
     echo "2. fscarmen(推荐)"
@@ -193,7 +193,7 @@ warp_script(){
     echo "5. P3TERX"
     echo " --------------"
     echo "0. 返回主菜单"
-    echo "                    "
+    echo ""
     read -rp "请输入选项:" warpNumberInput
 	case $warpNumberInput in
         1) wget -N https://raw.githubusercontents.com/yxdz2020/Misaka-WARP-Script/master/misakawarp.sh && bash misakawarp.sh ;;
@@ -237,7 +237,7 @@ aapanel(){
 }
 
 xui() {
-    echo "                            "
+    echo "                    "
     green "请选择你接下来使用的X-ui面板版本"
     echo "1. 使用X-ui官方原版"
     echo "2. 使用Misaka魔改版"
@@ -245,7 +245,7 @@ xui() {
     echo "4. 使用yxdz2020魔改版"
     echo " --------------"
     echo "0. 返回主菜单"
-    echo "                    "
+    echo ""
     read -rp "请输入选项:" xuiNumberInput
     case "$xuiNumberInput" in
         1) bash <(curl -Ls https://raw.githubusercontents.com/vaxilu/x-ui/master/install.sh) ;;
@@ -279,13 +279,13 @@ qlpanel(){
 
 serverstatus() {
     wget -N https://raw.githubusercontents.com/cokemine/ServerStatus-Hotaru/master/status.sh
-    echo "                            "
+    echo "                    "
     green "请选择你需要安装探针的客户端类型"
     echo "1. 服务端"
     echo "2. 监控端"
     echo " --------------"
     echo "0. 返回主页"
-    echo "                            "
+    echo ""
 	read -rp "请输入选项:" menuNumberInput1
     case "$menuNumberInput1" in
         1) bash status.sh s ;;
@@ -301,6 +301,7 @@ menu(){
     echo -e "#                   ${RED}Misaka Linux Toolbox${PLAIN}                    #"
     echo -e "# ${GREEN}原作者${PLAIN}: Misaka No                                           #"
     echo -e "# ${GREEN}现作者${PLAIN}: yxdz2020                                            #"
+    echo -e "# ${GREEN}特此说明${PLAIN}: 由于原作者源仓库删库,脚本大部分功能瘫痪,现由yxdz2020整合维护,后面期待Misaka No回归并维护更新脚本      #"
     echo "#############################################################"
     echo ""
     echo -e " ${GREEN}1.${PLAIN} 系统相关"

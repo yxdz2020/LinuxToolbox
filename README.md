@@ -8,16 +8,24 @@
 
 ## 使用方法
 
-1. 给这个项目一个Star 
-2. 用SSH客户端连接上VPS，输入以下命令（若不是root用户请先```sudo -i```提权）
+1. 给这个项目一个Star
 
-```sudo -i```
+2. 用SSH客户端连接上VPS，输入以下命令
+
+## 注意,若不是root用户,请先输入以下命令
+
+```
+sudo -i
+```
+
+工具箱一键脚本安装命令
 
 ```shell
 wget -N --no-check-certificate https://raw.githubusercontents.com/yxdz2020/LinuxToolbox/master/LinuxToolbox.sh && bash LinuxToolbox.sh
 ```
 
 第一次运行以后，可用快捷方式启动
+
 ```bash
 bash LinuxToolbox.sh
 ```
@@ -162,4 +170,5 @@ BitBucket：https://bitbucket.org/misakano7545/misakalinuxtoolbox/
 ![Alt](https://repobeats.axiom.co/api/embed/2512c745cf3ee94ad15c8e8ada474469e081f1c4.svg "Repobeats analytics image")
 
 ## License
+
 GNU General Public License v3.0  

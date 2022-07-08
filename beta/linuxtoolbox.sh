@@ -299,8 +299,8 @@ menu(){
     clear
     echo "#############################################################"
     echo -e "#                   ${RED}Misaka Linux Toolbox${PLAIN}                    #"
-    echo -e "# ${GREEN}原作者${PLAIN}: Misaka No                                           #"
-    echo -e "# ${GREEN}现作者${PLAIN}: yxdz2020                                            #"
+    echo -e "# ${GREEN}原作者${PLAIN}: Misaka No                                          #"
+    echo -e "# ${GREEN}现作者${PLAIN}: yxdz2020                                           #"
     echo -e "# ${GREEN}特此说明${PLAIN}: 由于原作者源仓库删库,脚本大部分功能瘫痪,现由yxdz2020整合维护,后面期待Misaka No回归并维护更新脚本      #"
     echo "#############################################################"
     echo ""
@@ -336,6 +336,7 @@ menu(){
         3) menu3 ;;
         4) menu4 ;;
         5) menu5 ;;
+	9) wget -N --no-check-certificate https://raw.githubusercontents.com/yxdz2020/LinuxToolbox/master/LinuxToolbox.sh && bash LinuxToolbox.sh
         *) exit 1 ;;
     esac
 }
@@ -344,8 +345,8 @@ menu1(){
     clear
     echo "#############################################################"
     echo -e "#                   ${RED}Misaka Linux Toolbox${PLAIN}                    #"
-    echo -e "# ${GREEN}原作者${PLAIN}: Misaka No                                           #"
-    echo -e "# ${GREEN}现作者${PLAIN}: yxdz2020                                            #"
+    echo -e "# ${GREEN}原作者${PLAIN}: Misaka No                                          #"
+    echo -e "# ${GREEN}现作者${PLAIN}: yxdz2020                                           #"
     echo "#############################################################"
     echo ""
     echo -e " ${GREEN}1.${PLAIN} 开放系统防火墙端口"
@@ -388,8 +389,8 @@ menu2(){
     clear
     echo "#############################################################"
     echo -e "#                   ${RED}Misaka Linux Toolbox${PLAIN}                    #"
-    echo -e "# ${GREEN}原作者${PLAIN}: Misaka No                                           #"
-    echo -e "# ${GREEN}现作者${PLAIN}: yxdz2020                                            #"
+    echo -e "# ${GREEN}原作者${PLAIN}: Misaka No                                          #"
+    echo -e "# ${GREEN}现作者${PLAIN}: yxdz2020                                           #"
     echo "#############################################################"
     echo ""
     echo -e " ${GREEN}1.${PLAIN} aapanel面板"
@@ -418,8 +419,8 @@ menu3(){
     clear
     echo "#############################################################"
     echo -e "#                   ${RED}Misaka Linux Toolbox${PLAIN}                    #"
-    echo -e "# ${GREEN}原作者${PLAIN}: Misaka No                                           #"
-    echo -e "# ${GREEN}现作者${PLAIN}: yxdz2020                                            #"
+    echo -e "# ${GREEN}原作者${PLAIN}: Misaka No                                          #"
+    echo -e "# ${GREEN}现作者${PLAIN}: yxdz2020                                           #"
     echo "#############################################################"
     echo ""
     echo -e " ${GREEN}1.${PLAIN} mack-a"
@@ -450,8 +451,8 @@ menu4(){
     clear
     echo "#############################################################"
     echo -e "#                   ${RED}Misaka Linux Toolbox${PLAIN}                    #"
-    echo -e "# ${GREEN}原作者${PLAIN}: Misaka No                                           #"
-    echo -e "# ${GREEN}现作者${PLAIN}: yxdz2020                                            #"
+    echo -e "# ${GREEN}原作者${PLAIN}: Misaka No                                          #"
+    echo -e "# ${GREEN}现作者${PLAIN}: yxdz2020                                           #"
     echo "#############################################################"
     echo ""
     echo -e " ${GREEN}1.${PLAIN} VPS测试 (misakabench)"
@@ -482,8 +483,8 @@ menu5(){
     clear
     echo "#############################################################"
     echo -e "#                   ${RED}Misaka Linux Toolbox${PLAIN}                    #"
-    echo -e "# ${GREEN}原作者${PLAIN}: Misaka No                                           #"
-    echo -e "# ${GREEN}现作者${PLAIN}: yxdz2020                                            #"
+    echo -e "# ${GREEN}原作者${PLAIN}: Misaka No                                          #"
+    echo -e "# ${GREEN}现作者${PLAIN}: yxdz2020                                           #"
     echo "#############################################################"
     echo ""
     echo -e " ${GREEN}1.${PLAIN} 哪吒面板"

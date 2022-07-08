@@ -338,7 +338,7 @@ menu(){
         4) menu4 ;;
         5) menu5 ;;
 	9) wget -N --no-check-certificate https://raw.githubusercontents.com/yxdz2020/LinuxToolbox/master/LinuxToolbox.sh && chmod -R 777 LinuxToolbox.sh && bash LinuxToolbox.sh ;;
-        *) exit 1 ;;
+        0) exit 0 ;;
     esac
 }
 
@@ -382,7 +382,6 @@ menu1(){
         12) setChinese ;;
         13) wget -N --no-check-certificate https://raw.githubusercontents.com/yxdz2020/tun-script/master/tun.sh && bash tun.sh ;;
 	0) menu ;;
-        *) exit 1 ;;
     esac
 }
 
@@ -412,7 +411,6 @@ menu2(){
         5) qlpanel ;;
         6) source <(curl -sL https://git.io/trojan-install) ;;
         0) menu ;;
-        *) exit 1 ;;
     esac
 }
 
@@ -444,7 +442,6 @@ menu3(){
         6) wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontents.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh && chmod +x shadowsocks-all.sh && ./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log ;;
         7) mkdir /home/mtproxy && cd /home/mtproxy && curl -s -o mtproxy.sh https://raw.githubusercontents.com/sunpma/mtp/master/mtproxy.sh && chmod +x mtproxy.sh && bash mtproxy.sh && bash mtproxy.sh start ;;
         0) menu ;;
-        *) exit 1 ;;
     esac
 }
 
@@ -476,7 +473,6 @@ menu4(){
         6) bash <(curl -L -s https://raw.githubusercontents.com/lmc999/RegionRestrictionCheck/main/check.sh) ;;
         7) bash <(curl -Lso- https://git.io/superspeed.sh) ;;
         0) menu ;;
-        *) exit 1 ;;
     esac
 }
 
@@ -497,7 +493,6 @@ menu5(){
     case $menuInput in
         1) curl -L https://raw.githubusercontents.com/naiba/nezha/master/script/install.sh -o nezha.sh && chmod +x nezha.sh && bash nezha.sh ;;
         0) menu ;;
-        *) exit 1 ;;
     esac
 }
 

@@ -338,7 +338,7 @@ menu(){
         4) menu4 ;;
         5) menu5 ;;
 	9) wget -N --no-check-certificate https://raw.githubusercontents.com/yxdz2020/LinuxToolbox/master/LinuxToolbox.sh && bash LinuxToolbox.sh ;;
-        *) exit 0 ;;
+        0) exit 1 ;;
     esac
 }
 

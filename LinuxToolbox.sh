@@ -157,8 +157,8 @@ open_ports(){
 bbr_script(){
     virt=$(systemd-detect-virt)
     TUN=$(cat /dev/net/tun 2>&1 | tr '[:upper:]' '[:lower:]')
-        if [[ ${virt} =~ "kvm"|"zvm"|"microsoft"|"xen"|"vmware" ]]; then
-            wget -O tcpx.sh "https://github.com/ylx2016/Linux-NetSpeed/raw/master/tcpx.sh" && chmod +x tcpx.sh && ./tcpx.sh
+    if [[ ${virt} =~ "kvm"|"zvm"|"microsoft"|"xen"|"vmware" ]]; then
+        wget -O tcpx.sh "https://github.com/ylx2016/Linux-NetSpeed/raw/master/tcpx.sh" && chmod +x tcpx.sh && ./tcpx.sh
     elif [[ ${virt} == "openvz" ]]; then
         if [[ ! $TUN =~ 'in bad state' ]] && [[ ! $TUN =~ '处于错误状态' ]] && [[ ! $TUN =~ 'Die Dateizugriffsnummer ist in schlechter Verfassung' ]]; then
             wget -N --no-check-certificate https://raw.githubusercontents.com/yxdz2020/tun-script/master/tun.sh && bash tun.sh
@@ -184,14 +184,14 @@ v6_dns64(){
 }
 
 warp_script(){
-    echo "                    "
+    echo ""
     green "请选择你接下来使用的脚本"
     echo "1. Misaka-WARP"
     echo "2. fscarmen(推荐)"
     echo "3. fscarmen-docker"
     echo "4. fscarmen warp解锁奈飞流媒体脚本"
     echo "5. P3TERX"
-    echo " --------------"
+	echo " --------------"
     echo "0. 返回主菜单"
     echo ""
     read -rp "请输入选项:" warpNumberInput
@@ -237,21 +237,21 @@ aapanel(){
 }
 
 xui() {
-    echo "                    "
+    echo "                            "
     green "请选择你接下来使用的X-ui面板版本"
     echo "1. 使用X-ui官方原版"
     echo "2. 使用Misaka魔改版"
     echo "3. 使用FranzKafkaYu魔改版"
-    echo "4. 使用yxdz2020魔改版"
-    echo " --------------"
+	echo "4. 使用yxdz2020魔改版"
+	echo " --------------"
     echo "0. 返回主菜单"
-    echo ""
+	echo ""
     read -rp "请输入选项:" xuiNumberInput
     case "$xuiNumberInput" in
         1) bash <(curl -Ls https://raw.githubusercontents.com/vaxilu/x-ui/master/install.sh) ;;
-        2) wget -N --no-check-certificate https://raw.githubusercontents.com/Misaka-blog/x-ui/master/install.sh && bash install.sh ;;
+        2) wget -N --no-check-certificate https://raw.githubusercontents.com/yxdz2020/x-ui/master/install.sh && bash install.sh ;;
         3) bash <(curl -Ls https://raw.githubusercontents.com/FranzKafkaYu/x-ui/master/install.sh) ;;
-	4) bash <(curl -Ls https://raw.githubusercontents.com/yxdz2020/x-ui/main/install.sh) ;;
+		4) bash <(curl -Ls https://raw.githubusercontents.com/yxdz2020/x-ui/main/install.sh) ;;
         0) menu ;;
     esac
 }
@@ -279,13 +279,13 @@ qlpanel(){
 
 serverstatus() {
     wget -N https://raw.githubusercontents.com/cokemine/ServerStatus-Hotaru/master/status.sh
-    echo "                    "
+    echo "                            "
     green "请选择你需要安装探针的客户端类型"
     echo "1. 服务端"
     echo "2. 监控端"
-    echo " --------------"
+	echo " --------------"
     echo "0. 返回主页"
-    echo ""
+    echo "                            "
 	read -rp "请输入选项:" menuNumberInput1
     case "$menuNumberInput1" in
         1) bash status.sh s ;;
@@ -299,10 +299,8 @@ menu(){
     clear
     echo "#############################################################"
     echo -e "#                   ${RED}Misaka Linux Toolbox${PLAIN}                    #"
-    echo -e "# ${GREEN}原作者${PLAIN}: Misaka No                                          #"
-    echo -e "# ${GREEN}现作者${PLAIN}: yxdz2020                                           #"
-    echo -e "# ${GREEN}特此说明${PLAIN}: 由于原作者源仓库删库,脚本大部分功能瘫痪,          #"
-    echo -e "# 现由yxdz2020整合维护,后面期待Misaka No回归并维护更新脚本                    #"
+    echo -e "# ${GREEN}原作者${PLAIN}: Misaka No                                         #"
+    echo -e "# ${GREEN}现作者${PLAIN}: yxdz2020                                          #"
     echo "#############################################################"
     echo ""
     echo -e " ${GREEN}1.${PLAIN} 系统相关"
@@ -337,8 +335,8 @@ menu(){
         3) menu3 ;;
         4) menu4 ;;
         5) menu5 ;;
-	
-        *) exit 1 ;;
+		9) wget -N --no-check-certificate https://raw.githubusercontents.com/yxdz2020/MisakaLinuxToolbox/master/MisakaToolbox.sh && bash MisakaToolbox.sh ;;
+        0) exit 0 ;;
     esac
 }
 
@@ -346,8 +344,8 @@ menu1(){
     clear
     echo "#############################################################"
     echo -e "#                   ${RED}Misaka Linux Toolbox${PLAIN}                    #"
-    echo -e "# ${GREEN}原作者${PLAIN}: Misaka No                                          #"
-    echo -e "# ${GREEN}现作者${PLAIN}: yxdz2020                                           #"
+    echo -e "# ${GREEN}原作者${PLAIN}: Misaka No                                         #"
+    echo -e "# ${GREEN}现作者${PLAIN}: yxdz2020                                          #"
     echo "#############################################################"
     echo ""
     echo -e " ${GREEN}1.${PLAIN} 开放系统防火墙端口"
@@ -370,7 +368,7 @@ menu1(){
     case $menuInput in
         1) open_ports ;;
         2) wget -N --no-check-certificate https://raw.githubusercontents.com/yxdz2020/rootLogin/master/root.sh && bash root.sh ;;
-        3) wget -N --no-check-certificate https://raw.githubusercontents.com/Misaka-blog/screenManager/master/screen.sh && bash screen.sh ;;
+        3) wget -N --no-check-certificate https://raw.githubusercontents.com/yxdz2020/screenManager/master/screen.sh && bash screen.sh ;;
         4) bbr_script ;;
         5) v6_dns64 ;;
         6) warp_script ;;
@@ -381,7 +379,7 @@ menu1(){
         11) bash <(curl -sSL https://cdn.jsdelivr.net/gh/SuperManito/LinuxMirrors@main/ChangeMirrors.sh) ;;
         12) setChinese ;;
         13) wget -N --no-check-certificate https://raw.githubusercontents.com/yxdz2020/tun-script/master/tun.sh && bash tun.sh ;;
-	0) menu ;;
+		0) menu ;;
     esac
 }
 
@@ -389,8 +387,8 @@ menu2(){
     clear
     echo "#############################################################"
     echo -e "#                   ${RED}Misaka Linux Toolbox${PLAIN}                    #"
-    echo -e "# ${GREEN}原作者${PLAIN}: Misaka No                                          #"
-    echo -e "# ${GREEN}现作者${PLAIN}: yxdz2020                                           #"
+    echo -e "# ${GREEN}原作者${PLAIN}: Misaka No                                         #"
+    echo -e "# ${GREEN}现作者${PLAIN}: yxdz2020                                          #"
     echo "#############################################################"
     echo ""
     echo -e " ${GREEN}1.${PLAIN} aapanel面板"
@@ -418,8 +416,8 @@ menu3(){
     clear
     echo "#############################################################"
     echo -e "#                   ${RED}Misaka Linux Toolbox${PLAIN}                    #"
-    echo -e "# ${GREEN}原作者${PLAIN}: Misaka No                                          #"
-    echo -e "# ${GREEN}现作者${PLAIN}: yxdz2020                                           #"
+    echo -e "# ${GREEN}原作者${PLAIN}: Misaka No                                         #"
+    echo -e "# ${GREEN}现作者${PLAIN}: yxdz2020                                          #"
     echo "#############################################################"
     echo ""
     echo -e " ${GREEN}1.${PLAIN} mack-a"
@@ -438,7 +436,7 @@ menu3(){
         2) wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontents.com/wulabing/V2Ray_ws-tls_bash_onekey/master/install.sh" && chmod +x install.sh && bash install.sh ;;
         3) wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontents.com/wulabing/Xray_onekey/nginx_forward/install.sh" && chmod +x install.sh && bash install.sh ;;
         4) wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontents.com/wulabing/Xray_onekey/main/install.sh" && chmod +x install.sh && bash install.sh ;;
-        5) wget -N --no-check-certificate https://raw.githubusercontents.com/Misaka-blog/Xray-script/master/xray.sh && bash xray.sh ;;
+        5) wget -N --no-check-certificate https://raw.githubusercontents.com/yxdz2020/Xray-script/master/xray.sh && bash xray.sh ;;
         6) wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontents.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh && chmod +x shadowsocks-all.sh && ./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log ;;
         7) mkdir /home/mtproxy && cd /home/mtproxy && curl -s -o mtproxy.sh https://raw.githubusercontents.com/sunpma/mtp/master/mtproxy.sh && chmod +x mtproxy.sh && bash mtproxy.sh && bash mtproxy.sh start ;;
         0) menu ;;
@@ -449,8 +447,8 @@ menu4(){
     clear
     echo "#############################################################"
     echo -e "#                   ${RED}Misaka Linux Toolbox${PLAIN}                    #"
-    echo -e "# ${GREEN}原作者${PLAIN}: Misaka No                                          #"
-    echo -e "# ${GREEN}现作者${PLAIN}: yxdz2020                                           #"
+    echo -e "# ${GREEN}原作者${PLAIN}: Misaka No                                         #"
+    echo -e "# ${GREEN}现作者${PLAIN}: yxdz2020                                          #"
     echo "#############################################################"
     echo ""
     echo -e " ${GREEN}1.${PLAIN} VPS测试 (misakabench)"
@@ -480,8 +478,8 @@ menu5(){
     clear
     echo "#############################################################"
     echo -e "#                   ${RED}Misaka Linux Toolbox${PLAIN}                    #"
-    echo -e "# ${GREEN}原作者${PLAIN}: Misaka No                                          #"
-    echo -e "# ${GREEN}现作者${PLAIN}: yxdz2020                                           #"
+    echo -e "# ${GREEN}原作者${PLAIN}: Misaka No                                         #"
+    echo -e "# ${GREEN}现作者${PLAIN}: yxdz2020                                          #"
     echo "#############################################################"
     echo ""
     echo -e " ${GREEN}1.${PLAIN} 哪吒面板"

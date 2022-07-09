@@ -379,7 +379,7 @@ menu1(){
         11) bash <(curl -sSL https://cdn.jsdelivr.net/gh/SuperManito/LinuxMirrors@main/ChangeMirrors.sh) ;;
         12) setChinese ;;
         13) wget -N --no-check-certificate https://raw.githubusercontents.com/yxdz2020/tun-script/master/tun.sh && bash tun.sh ;;
-		0) menu ;;
+	0) menu ;;
     esac
 }
 

@@ -8,23 +8,16 @@
 
 ## 使用方法
 
-1. 给这个项目一个Star
+1. 给这个项目一个Star 
+2. 用SSH客户端连接上VPS，输入以下命令（若不是root用户请先`sudo -i`提权）
 
-2. 用SSH客户端连接上VPS，输入以下命令
-
-## 注意，若不是root用户,请先输入以下命令
 ```shell
-sudo -i
-```
-
-工具箱一键脚本安装命令
-```shell
-wget -N --no-check-certificate https://raw.githubusercontents.com/yxdz2020/LinuxToolbox/master/LinuxToolbox.sh && bash LinuxToolbox.sh
+wget -N --no-check-certificate https://raw.githubusercontents.com/Misaka-blog/MisakaLinuxToolbox/master/MisakaToolbox.sh && bash MisakaToolbox.sh
 ```
 
 第一次运行以后，可用快捷方式启动
 ```bash
-bash LinuxToolbox.sh
+bash MisakaToolbox.sh
 ```
 
 ## 工具箱功能提议
@@ -151,6 +144,14 @@ DD系统：https://www.cxthhhhh.com/network-reinstall-system-modify
 更换系统语言：https://github.com/johnrosen1/vpstoolbox
 </details>  
 
+## 赞助我们
+
+点击页面上方的Sponsor按钮，赞助我们！  
+你的赞助会帮助工具箱变得更完善！
+
+## 交流群
+[Telegram](https://t.me/misakanetcn)
+
 ## 防和谐备份仓库
 
 GitHub：https://github.com/Misaka-blog/MisakaLinuxToolbox/
@@ -158,9 +159,18 @@ GitHub：https://github.com/Misaka-blog/MisakaLinuxToolbox/
 GitLab：https://gitlab.com/misakano7545/MisakaLinuxToolbox
 
 BitBucket：https://bitbucket.org/misakano7545/misakalinuxtoolbox/
+## Stars 增长记录
+
+[![Stargazers over time](https://starchart.cc/Misaka-blog/MisakaLinuxToolbox.svg)](https://starchart.cc/Misaka-blog/MisakaLinuxToolbox)
 
 ## Repo 统计
 ![Alt](https://repobeats.axiom.co/api/embed/2512c745cf3ee94ad15c8e8ada474469e081f1c4.svg "Repobeats analytics image")
 
+## 贡献者
+<a href="https://github.com/Misaka-blog/MisakaLinuxToolbox/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Misaka-blog/MisakaLinuxToolbox" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
 ## License
 GNU General Public License v3.0  

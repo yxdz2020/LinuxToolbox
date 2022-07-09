@@ -191,7 +191,7 @@ warp_script(){
     echo "3. fscarmen-docker"
     echo "4. fscarmen warp解锁奈飞流媒体脚本"
     echo "5. P3TERX"
-	echo " --------------"
+    echo " --------------"
     echo "0. 返回主菜单"
     echo ""
     read -rp "请输入选项:" warpNumberInput
@@ -242,16 +242,16 @@ xui() {
     echo "1. 使用X-ui官方原版"
     echo "2. 使用Misaka魔改版"
     echo "3. 使用FranzKafkaYu魔改版"
-	echo "4. 使用yxdz2020魔改版"
-	echo " --------------"
+    echo "4. 使用yxdz2020魔改版"
+    echo " --------------"
     echo "0. 返回主菜单"
-	echo ""
+    echo ""
     read -rp "请输入选项:" xuiNumberInput
     case "$xuiNumberInput" in
         1) bash <(curl -Ls https://raw.githubusercontents.com/vaxilu/x-ui/master/install.sh) ;;
         2) wget -N --no-check-certificate https://raw.githubusercontents.com/yxdz2020/x-ui/master/install.sh && bash install.sh ;;
         3) bash <(curl -Ls https://raw.githubusercontents.com/FranzKafkaYu/x-ui/master/install.sh) ;;
-		4) bash <(curl -Ls https://raw.githubusercontents.com/yxdz2020/x-ui/main/install.sh) ;;
+	4) bash <(curl -Ls https://raw.githubusercontents.com/yxdz2020/x-ui/main/install.sh) ;;
         0) menu ;;
     esac
 }
@@ -283,10 +283,10 @@ serverstatus() {
     green "请选择你需要安装探针的客户端类型"
     echo "1. 服务端"
     echo "2. 监控端"
-	echo " --------------"
+    echo " --------------"
     echo "0. 返回主页"
     echo "                            "
-	read -rp "请输入选项:" menuNumberInput1
+    read -rp "请输入选项:" menuNumberInput1
     case "$menuNumberInput1" in
         1) bash status.sh s ;;
         2) bash status.sh c ;;
@@ -335,7 +335,7 @@ menu(){
         3) menu3 ;;
         4) menu4 ;;
         5) menu5 ;;
-		9) wget -N --no-check-certificate https://raw.githubusercontents.com/yxdz2020/MisakaLinuxToolbox/master/MisakaToolbox.sh && bash MisakaToolbox.sh ;;
+	9) wget -N --no-check-certificate https://raw.githubusercontents.com/yxdz2020/MisakaLinuxToolbox/master/MisakaToolbox.sh && bash MisakaToolbox.sh ;;
         0) exit 0 ;;
     esac
 }
